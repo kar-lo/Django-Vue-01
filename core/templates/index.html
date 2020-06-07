@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="app">
+    <div class="jumbotron">
+      <div class="container">
+        <h1> Hola, mi nombre es Karlo y estoy combinando tecnologias. </h1>
+         <p> Este proyecto trabaja con <a href="https://www.djangoproject.com/" target="_blank">Django</a> y <a href="https://vuejs.org/" target="_blank">VueJS</a>.</p>
+        <p>
+          <a href="https://github.com/settings/repositories" target="_blank">Visite mi cuenta en GitHub</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h3>Datos de Django 3</h3>
+        <ul>
+          {% for user in users %}
+            <li>{{user}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Datos de VueJS</h3>
+        <ul>
+          <li v-for='user in users'>${ user.username }</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+{% endblock content %}
